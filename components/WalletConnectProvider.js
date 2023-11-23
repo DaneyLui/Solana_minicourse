@@ -13,4 +13,12 @@ export const WalletConnectProvider = ({children}) =>{
         }
         return clusterApiUrl(network);
     },[network]);
+    const wallets = useMemo (()=>[new PhantomWalletAdapter()],[network]);
+    return(
+        <ConnectionProvider endpoint={endpoint}>
+            <WalletProvider wallets ={wallets} autoConnect>
+                <WalletModalProvider>{children}</WalletModalProvider>
+            </WalletProvider>
+        </ConnectionProvider>
+    )
 }
