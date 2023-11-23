@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import '../styles/global.css'
-import { WalletConnectorProvider } from '../components/WalletConnectProvider';
+import { WalletConnectProvider } from '../components/WalletConnectProvider';
 // Import WalletConnectionProvider from components
 // Import the solana wallet css
 
